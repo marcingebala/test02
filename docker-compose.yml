@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  test02:
+    build: .
+    environment:
+      - NODE_ENV=development
+      - DOCKER_ENV=true
+    ports:
+      - '8085:8085'
+    volumes:
+      - ./:/app/
+      - /app/node_modules/
